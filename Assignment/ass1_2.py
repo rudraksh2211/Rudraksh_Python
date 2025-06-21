@@ -1,0 +1,12 @@
+a=input("Enter First String")
+b=input("Enter Second String")
+c=a+b
+print(a,b,sep=" ")
+print(c)
+print(c.upper())
+print(c.lower())
+print(c.capitalize())
+print(c.center(20))
+print(c.count("r"))
+print(c.expandtabs(10))
+print(c.casefold())
