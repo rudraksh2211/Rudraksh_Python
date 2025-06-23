@@ -1,0 +1,8 @@
+import sqlite3
+
+conn=sqlite3.connect("db1.db")
+conn.execute("Update rudraksh set username='XYZ' where usid=2")
+             
+
+
+conn.close()
