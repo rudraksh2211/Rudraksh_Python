@@ -1,8 +1,4 @@
-import sqlite3
-
-conn=sqlite3.connect("db1.db")
-conn.execute("Update rudraksh set username='XYZ' where usid=2")
-             
-
-
-conn.close()
+import pandas
+qmark={"day1":420,"day2":410,"day3":390}
+q=pandas.Series(qmark,dtype=float)
+print(q)
