@@ -1,5 +1,1 @@
-
-print(arr1)
-
-arr=np.empty(10)
-print(arr)
+np.nan_to_num(arr,0)
