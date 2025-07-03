@@ -1,0 +1,1 @@
+select s.customer_id, s.product_id, sum(m.price) as price from sales as s join menu as m where s.product_id=m.product_id group by s.customer_id

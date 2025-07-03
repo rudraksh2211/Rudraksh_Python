@@ -1,0 +1,1 @@
+select customer_id ,count(distinct order_date)from sales group by customer_id

@@ -1,0 +1,1 @@
+select customer_id , product_id from sales  where order_date=(select min(order_date) from sales)
