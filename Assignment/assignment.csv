@@ -1,0 +1,1 @@
+rawtablename,rawtablecolumn,rawtablecoldatatype,curatedtablename,curatedtablecolumn,curatedtablecolumndatatype,presentationlayertablename,presentationlayercolumn,presentationlayercolumndatatypeuser,id,varchar,employee,empid,varchar,emp,empid,varcharuser,name,varchar,employee,empname,varchar,emp,empname,varchar

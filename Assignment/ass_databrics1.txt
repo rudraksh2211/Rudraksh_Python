@@ -1,0 +1,57 @@
+df=spark.table("workspace.skit.assignment")
+rtable=""
+rcolumn=""
+ctable=""
+ccolumn=""
+ptable=""
+pcolumn=""
+
+for x in df.collect():
+    rcurrent_table=x["rawtablename"]
+    rcolumn_name=x["rawtablecolumn"]
+    rdata_type=x["rawtablecoldatatype"]
+    if rcurrent_table != rtable:
+        if rtable != "":
+           print(f"drop table {rtable}")
+        rtable=rcurrent_table
+        rcolumn=f"{rcolumn_name} {rdata_type}"
+    else:
+        rcolumn+=f",{rcolumn_name} {rdata_type}"
+print(f"create table {rtable}({rcolumn})")
+if table != "":
+    print(f"create table {rtable}({rcolumn})")
+
+    # curated table
+
+  
+
+    ccurrent_table=x["curatedtablename"]
+    ccolumn_name=x["curatedtablecolumn"]
+   
+    cdata_type=x["curatedtablecolumndatatype"]
+    if ccurrent_table != ctable:
+        if ctable != "":
+           print(f"drop table {ctable}")
+        ctable=ccurrent_table
+        ccolumn=f"{ccolumn_name} {cdata_type}"
+    else:
+        ccolumn+=f",{ccolumn_name} {cdata_type}"
+print(f"create table {ctable}({ccolumn})")
+if ctable != "":
+    print(f"create table {ctable}({ccolumn})")
+
+    # presentation table
+
+    pcurrent_table=x["presentationlayertablename"]
+    pcolumn_name=x["presentationlayercolumn"]
+    pdata_type=x["presentationlayercolumndatatype"]
+    if pcurrent_table != ptable:
+        if ptable != "":
+           print(f"drop table {ptable}")
+        ptable=pcurrent_table
+        pcolumn=f"{pcolumn_name} {pdata_type}"
+    else:
+        pcolumn+=f",{pcolumn_name} {pdata_type}"
+print(f"create table {ptable}({pcolumn})")
+if ptable != "":
+    print(f"create table {ptable}({pcolumn})")
